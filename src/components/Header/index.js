@@ -6,8 +6,10 @@ import history from '../../history';
 
 const Header = () => (
     <header id="main-header">
-        JSHunt
-        <Button variant="danger" color="secondary" onClick={() => history.push('/new')}>
+        <div>
+        </div>
+        User Manager
+        <Button className="header-button" variant="danger" color="secondary" onClick={() => history.push('/new')}>
             Cadastrar
         </Button>{' '}
     </header>

@@ -6,6 +6,12 @@ header#main-header {
     font-weight: bold;
     color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.header-button {
+    color: black;
+    justify-self: flex-end;
+    margin-right: 2em;
 }

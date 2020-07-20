@@ -47,7 +47,8 @@ export default class Main extends Component{
                     <article key={user._id}>
                         <strong>{user.name}</strong>
                         <p>{user.email}</p>
-                        <Link to={`/users/${user._id}`}>Acessar</Link>
+                        <Link to={`/users/${user._id}`}>Editar</Link>
+                        <Link to={`/users/${user._id}`}>Remover</Link>
                     </article>
                 ))}
 
