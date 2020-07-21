@@ -39,6 +39,13 @@ export default class Main extends Component{
         this.loadUsers(pageNumber);
     }
 
+
+    removeItem = async(id) => {
+        const response =  await api.delete(`/users/${id}`);
+        alert('Elemento excluido!');    
+        window.location.reload(true);
+    }
+
     render() {
         const { users, page, usersInfo} = this.state;
         return (
@@ -48,7 +55,7 @@ export default class Main extends Component{
                         <strong>{user.name}</strong>
                         <p>{user.email}</p>
                         <Link to={`/users/${user._id}`}>Editar</Link>
-                        <Link to={`/users/${user._id}`}>Remover</Link>
+                        <a onClick={this.removeItem.bind(this, user._id)}>Remover</a>
                     </article>
                 ))}
 
