@@ -9,8 +9,8 @@ const Header = () => (
         <div>
         </div>
         User Manager
-        <Button className="header-button" variant="danger" color="secondary" onClick={() => history.push('/new')}>
-            Cadastrar
+        <Button className="header-button" variant="success" color="secondary" onClick={() => history.push('/new')}>
+            New
         </Button>{' '}
     </header>
 );

@@ -41,9 +41,14 @@ export default class Main extends Component{
 
 
     removeItem = async(id) => {
-        const response =  await api.delete(`/users/${id}`);
-        alert('Elemento excluido!');    
-        window.location.reload(true);
+        if (window.confirm('Are you sure you wish to delete this item?')){
+            await api.delete(`/users/${id}`)
+            .then((res) => {
+                console.log(res);
+                alert('Successsfully deleted!');
+            });  
+            window.location.reload(true);
+        }
     }
 
     render() {

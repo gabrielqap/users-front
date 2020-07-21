@@ -52,18 +52,18 @@ export default class newForm extends Component {
         event.preventDefault()
         const { name, email, password} = this.state;
         if(this.typeForm === "POST"){
-            const response = await api.post('/users', {name, email, password})
+            await api.post('/users', {name, email, password})
             .then((res) => {
                 console.log(res);
-                alert('Cadastrado com sucesso!');
+                alert('Successful registration!');
             });
         }
         else {
             const { id } = this.props.match.params;
-            const response = await api.put(`/users/${id}`, {name, email, password})
+            await api.put(`/users/${id}`, {name, email, password})
             .then((res) => {
                 console.log(res);
-                alert('Alterado com sucesso!');
+                alert('Successsfully changed!');
             });
         }
        // console.log(response);
